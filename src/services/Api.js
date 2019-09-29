@@ -3,7 +3,7 @@ import cachios from 'cachios';
 
 export default class Api {
   constructor() {
-    this.root_url = 'http://api.inaturalist.org/v1/';
+    this.root_url = 'https://api.inaturalist.org/v1/';
     const axiosInstance = axios.create({
       baseURL: this.root_url,
     });
