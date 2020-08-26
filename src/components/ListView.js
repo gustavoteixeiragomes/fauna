@@ -42,7 +42,7 @@ export default class ListView extends Component {
         "Mammalia",
       ];
       const iconic_taxa = encodeURI(allows_taxa.join(','));
-      const url = `${action}?geo=true&mappable=true&identified=true&photo=true&q=${query}&iconic_taxa=${iconic_taxa}&search_on=${search_on}&order=${order}&order_by=${order_by}&page=${page}&per_page=${per_page}`;
+      const url = `${action}?geo=true&mappable=true&photo=true&q=${query}&iconic_taxa=${iconic_taxa}&search_on=${search_on}&order=${order}&order_by=${order_by}&page=${page}&per_page=${per_page}`;
 
       Api.get(url).then(data => {
         data.results = data.results.map((result, key) => {

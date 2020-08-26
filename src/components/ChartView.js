@@ -40,7 +40,7 @@ export default class ChartView extends Component {
     const month = this.state.date.format('M');
     const year = this.state.date.format('YYYY');
     const without_taxon_id = encodeURI([43583,43584].join(',')); // Remove humans
-    const url = `${action}?geo=true&mappable=true&identified=true&photos=true&identified=true&iconic_taxa=${iconic_taxa}&page=1&per_page=${per_page}&month=${month}&year=${year}&without_taxon_id=${without_taxon_id}`;
+    const url = `${action}?geo=true&mappable=true&photos=true&iconic_taxa=${iconic_taxa}&page=1&per_page=${per_page}&month=${month}&year=${year}&without_taxon_id=${without_taxon_id}`;
     Api.get(url).then(data => {
       data.results = data.results.map((result, key) => {
         const observation = {
